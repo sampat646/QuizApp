@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #f8f9fa;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='%23e9ecef' d='M20 0c2.8 0 5 2.2 5 5s-2.2 5-5 5-5-2.2-5-5 2.2-5 5-5zM0 20c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5z'/%3E%3C/svg%3E");
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    text-align: center;
+    color: #2c3e50;
+    font-size: clamp(24px, 5vw, 32px); /* Responsive font size */
+    margin: clamp(20px, 4vh, 40px) 0;
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.heading::after {
+    content: '';
+    display: block;
+    width: clamp(60px, 10vw, 80px);
+    height: 3px;
+    background: #6c757d;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.pat {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(15px, 3vw, 40px);
+    padding: clamp(10px, 2vw, 20px);
+    place-items: center;
+}
+
+.platform1,
+.platform2,
+.platform3 {
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 3/4; /* Maintains proportion */
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Platform decorative elements */
+.platform1::before,
+.platform2::before,
+.platform3::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: 0;
+    left: 0;
+}
+
+.platform1::before {
+    background: #4b6584;
+}
+
+.platform2::before {
+    background: #58B19F;
+}
+
+.platform3::before {
+    background: #9B59B6;
+}
+
+/* Hover effects - disabled on touch devices */
+@media (hover: hover) {
+    .platform1:hover,
+    .platform2:hover,
+    .platform3:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+}
+
+/* Decorative corner flowers */
+.platform1::after,
+.platform2::after,
+.platform3::after {
+    content: '';
+    position: absolute;
+    width: clamp(40px, 8vw, 60px);
+    height: clamp(40px, 8vw, 60px);
+    bottom: 10px;
+    right: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23f8f9fa' d='M50 0c5 0 9 4 9 9s-4 9-9 9-9-4-9-9 4-9 9-9z'/%3E%3C/svg%3E");
+    opacity: 0.3;
+    transform: rotate(45deg);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 1400px) {
+    .pat {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .pat {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .pat {
+        gap: 20px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .heading {
+        margin: 15px 0;
+    }
+
+    .pat {
+        gap: 15px;
+        padding: 10px;
+        grid-template-columns: 1fr;
+    }
+
+    .platform1,
+    .platform2,
+    .platform3 {
+        max-width: 100%;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 320px) {
+    .heading {
+        font-size: 20px;
+    }
+
+    .pat {
+        gap: 12px;
+        padding: 8px;
+    }
+}
+
+/* For landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .pat {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .platform1,
+    .platform2,
+    .platform3 {
+        aspect-ratio: 4/3;
+    }
+}

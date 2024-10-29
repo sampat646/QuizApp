@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='%23e9ecef' d='M20 0c2.8 0 5 2.2 5 5s-2.2 5-5 5-5-2.2-5-5 2.2-5 5-5zM0 20c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5z'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath fill='%23dee2e6' d='M30 20c2.8 0 5 2.2 5 5s-2.2 5-5 5-5-2.2-5-5 2.2-5 5-5z'/%3E%3C/svg%3E");
+    padding: 20px;
+}
+
+.app {
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative corner flowers */
+.app::before,
+.app::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23f8f9fa' d='M50 0c5 0 9 4 9 9s-4 9-9 9-9-4-9-9 4-9 9-9z'/%3E%3C/svg%3E");
+    opacity: 0.3;
+}
+
+.app::before {
+    top: -20px;
+    left: -20px;
+    transform: rotate(45deg);
+}
+
+.app::after {
+    bottom: -20px;
+    right: -20px;
+    transform: rotate(225deg);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #6c757d;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.quiz {
+    margin: 20px 0;
+}
+
+h2 {
+    color: #34495e;
+    font-size: 20px;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.answer-button {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover:not([disabled]) {
+    background: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+
+.next-btn {
+    background: #4b6584;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 0;
+    transition: all 0.3s ease;
+}
+
+.next-btn:hover {
+    background: #3c5270;
+    transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .app {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+
+    .app::before,
+    .app::after {
+        width: 60px;
+        height: 60px;
+    }
+}
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+background: #ff9393;
+}
