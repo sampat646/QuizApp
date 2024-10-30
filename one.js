@@ -1,140 +1,98 @@
 const question = [
+    // Existing questions...
+
     {
-        question: "What is the time complexity of selection sort?",
+        question: "What is the best data structure to implement an LRU (Least Recently Used) cache?",
         answer: [
-            { text: "O(log n)", correct: false },
-            { text: "O(n)", correct: false },
-            { text: "O(n^2)", correct: true },
-            { text: "O(n^3)", correct: false }
-        ]
-    },
-    {
-        question: "What is the time complexity of bubble sort in the worst case?",
-        answer: [
-            { text: "O(n)", correct: false },
-            { text: "O(n^2)", correct: true },
-            { text: "O(n log n)", correct: false },
-            { text: "O(n^3)", correct: false }
-        ]
-    },
-    {
-        question: "Which data structure uses LIFO (Last In First Out) principle?",
-        answer: [
+            { text: "Array", correct: false },
             { text: "Queue", correct: false },
-            { text: "Stack", correct: true },
-            { text: "Linked List", correct: false },
-            { text: "Tree", correct: false }
+            { text: "Hash Map with Doubly Linked List", correct: true },
+            { text: "Stack", correct: false }
         ]
     },
     {
-        question: "What is the space complexity of a recursive function with a depth of n?",
+        question: "What is the most efficient way to check if a binary tree is balanced?",
         answer: [
-            { text: "O(n)", correct: true },
-            { text: "O(log n)", correct: false },
-            { text: "O(n^2)", correct: false },
-            { text: "O(1)", correct: false }
+            { text: "Using Depth-First Search with a height check", correct: true },
+            { text: "Using Breadth-First Search", correct: false },
+            { text: "Checking each level's node count", correct: false },
+            { text: "Using In-Order Traversal", correct: false }
         ]
     },
     {
-        question: "Which algorithm divides the array into two halves recursively?",
+        question: "Which sorting algorithm maintains the order of equal elements (i.e., is stable)?",
         answer: [
             { text: "Quick Sort", correct: false },
             { text: "Merge Sort", correct: true },
-            { text: "Bubble Sort", correct: false },
-            { text: "Selection Sort", correct: false }
-        ]
-    },
-    {
-        question: "Which data structure is best for implementing a FIFO queue?",
-        answer: [
-            { text: "Array", correct: false },
-            { text: "Stack", correct: false },
-            { text: "Linked List", correct: true },
-            { text: "Tree", correct: false }
-        ]
-    },
-    {
-        question: "What is the purpose of a hash function in a hash table?",
-        answer: [
-            { text: "To sort the elements", correct: false },
-            { text: "To map keys to unique indices", correct: true },
-            { text: "To traverse a tree", correct: false },
-            { text: "To perform binary search", correct: false }
-        ]
-    },
-    {
-        question: "What is the best case time complexity of quicksort?",
-        answer: [
-            { text: "O(n log n)", correct: true },
-            { text: "O(n)", correct: false },
-            { text: "O(n^2)", correct: false },
-            { text: "O(log n)", correct: false }
-        ]
-    },
-    {
-        question: "Which of the following data structures is non-linear?",
-        answer: [
-            { text: "Array", correct: false },
-            { text: "Linked List", correct: false },
-            { text: "Stack", correct: false },
-            { text: "Graph", correct: true }
-        ]
-    },
-    {
-        question: "Which algorithm is commonly used for shortest path in a weighted graph?",
-        answer: [
-            { text: "DFS", correct: false },
-            { text: "BFS", correct: false },
-            { text: "Dijkstra’s Algorithm", correct: true },
-            { text: "Binary Search", correct: false }
-        ]
-    },
-    {
-        question: "What data structure is used in Breadth First Search (BFS)?",
-        answer: [
-            { text: "Stack", correct: false },
-            { text: "Queue", correct: true },
-            { text: "Linked List", correct: false },
-            { text: "Tree", correct: false }
-        ]
-    },
-    {
-        question: "Which sorting algorithm is stable?",
-        answer: [
-            { text: "Merge Sort", correct: true },
-            { text: "Quick Sort", correct: false },
             { text: "Heap Sort", correct: false },
             { text: "Selection Sort", correct: false }
         ]
     },
     {
-        question: "In Binary Search, what condition allows it to work?",
+        question: "Which algorithm efficiently finds the shortest path from a single source to all other vertices in a weighted graph?",
         answer: [
-            { text: "Array must be sorted", correct: true },
-            { text: "Array must contain unique elements", correct: false },
-            { text: "Array must contain no duplicates", correct: false },
-            { text: "Array must be in descending order", correct: false }
+            { text: "Depth-First Search (DFS)", correct: false },
+            { text: "Dijkstra’s Algorithm", correct: true },
+            { text: "Breadth-First Search (BFS)", correct: false },
+            { text: "Bellman-Ford Algorithm", correct: false }
         ]
     },
     {
-        question: "Which of the following data structures can be used to detect a cycle in a directed graph?",
+        question: "What is a good choice of data structure for efficiently finding the k smallest elements in an array?",
         answer: [
             { text: "Stack", correct: false },
             { text: "Queue", correct: false },
-            { text: "Hash Table", correct: false },
-            { text: "DFS with Recursion Stack", correct: true }
+            { text: "Min Heap", correct: true },
+            { text: "Set", correct: false }
         ]
     },
     {
-        question: "What is the minimum height of a binary search tree with n nodes?",
+        question: "Which traversal method would allow you to retrieve nodes in sorted order from a Binary Search Tree?",
         answer: [
+            { text: "Pre-Order Traversal", correct: false },
+            { text: "In-Order Traversal", correct: true },
+            { text: "Post-Order Traversal", correct: false },
+            { text: "Level-Order Traversal", correct: false }
+        ]
+    },
+    {
+        question: "Which algorithm is commonly used to find connected components in an undirected graph?",
+        answer: [
+            { text: "Depth-First Search (DFS)", correct: true },
+            { text: "Dijkstra’s Algorithm", correct: false },
+            { text: "Bellman-Ford Algorithm", correct: false },
+            { text: "Binary Search", correct: false }
+        ]
+    },
+    {
+        question: "What is the time complexity of accessing an element by index in an array?",
+        answer: [
+            { text: "O(1)", correct: true },
             { text: "O(n)", correct: false },
-            { text: "O(log n)", correct: true },
-            { text: "O(n^2)", correct: false },
-            { text: "O(1)", correct: false }
+            { text: "O(log n)", correct: false },
+            { text: "O(n^2)", correct: false }
+        ]
+    },
+    {
+        question: "Which data structure can be used to check for balanced parentheses in an expression?",
+        answer: [
+            { text: "Queue", correct: false },
+            { text: "Stack", correct: true },
+            { text: "Heap", correct: false },
+            { text: "Linked List", correct: false }
+        ]
+    },
+    {
+        question: "Which algorithm uses a priority queue to find the minimum spanning tree of a graph?",
+        answer: [
+            { text: "Kruskal's Algorithm", correct: false },
+            { text: "Prim's Algorithm", correct: true },
+            { text: "Bellman-Ford Algorithm", correct: false },
+            { text: "Binary Search", correct: false }
         ]
     }
 ];
+
 
 
 const questionElement = document.getElementsByClassName("questions")[0];
@@ -210,6 +168,7 @@ nextButton.addEventListener("click", () => {
         startQuiz();
     }
 });
+
 
 function showScore() {
     resetState();

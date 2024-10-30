@@ -1,3 +1,4 @@
+/* Reset and global styles */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +9,7 @@
 body {
     min-height: 100vh;
     background: #f8f9fa;
-    background-image: 
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='%23e9ecef' d='M20 0c2.8 0 5 2.2 5 5s-2.2 5-5 5-5-2.2-5-5 2.2-5 5-5zM0 20c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='%23e9ecef' d='M20 0c2.8 0 5 2.2 5 5s-2.2 5-5 5-5-2.2-5-5 2.2-5 5-5zM0 20c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5z'/%3E%3C/svg%3E");
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@ body {
 .heading {
     text-align: center;
     color: #2c3e50;
-    font-size: clamp(24px, 5vw, 32px); /* Responsive font size */
+    font-size: clamp(24px, 5vw, 32px);
     margin: clamp(20px, 4vh, 40px) 0;
     position: relative;
     width: 100%;
@@ -52,7 +52,7 @@ body {
 .platform3 {
     width: 100%;
     max-width: 350px;
-    aspect-ratio: 3/4; /* Maintains proportion */
+    aspect-ratio: 3/4;
     background: white;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -116,6 +116,14 @@ body {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23f8f9fa' d='M50 0c5 0 9 4 9 9s-4 9-9 9-9-4-9-9 4-9 9-9z'/%3E%3C/svg%3E");
     opacity: 0.3;
     transform: rotate(45deg);
+}
+
+.platform1 i,
+.platform2 i,
+.platform3 i {
+    margin-right: 8px;
+    font-size: 1.5rem;
+    color: #6c757d;
 }
 
 a {
@@ -195,3 +203,4 @@ a {
         aspect-ratio: 4/3;
     }
 }
+
