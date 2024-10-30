@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz Home Page</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM3m47i90x9wB77qY2p7ewm5K3hLzP5UtF2nW1" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Quiz App</title>
+    <link rel="stylesheet" href="/questions.css">
 </head>
 <body>
-    <h1 class="heading">Choose the Platform</h1>
-    <main class="pat">
-        <a href="/one.html">
-            <div class="platform1">
-                <i class="fas fa-code"></i> DSA
-            </div>
-        </a>
-        <a href="/two.html">
-            <div class="platform2">
-                <i class="fab fa-git-alt"></i> Git
-            </div>
-        </a>
-        <a href="/three.html">
-            <div class="platform3">
-                <i class="fas fa-database"></i> SQL
-            </div>
-        </a>
-        <a href="/four.html">
-            <div class="platform1">
-                <i class="fas fa-code"></i> Java
-            </div>
-        </a>
-        <a href="/five.html">
-            <div class="platform2">
-                <i class="fab fa-git-alt"></i> Python
-            </div>
-        </a>
-        <a href="/six.html">
-            <div class="platform3">
-                <i class="fas fa-database"></i> Html & Css
-            </div>
-        </a>
-    </main>
+    <div class="app">
+        <h1>Welcome to the Quiz App</h1>
+        <p class="description">Test your knowledge and have fun with our quizzes on various topics!</p>
+        <div class="flex justify-center">
+            <a href="/index.html" class="btn start-btn">Start Quiz</a>
+        </div>
+    </div>
+
+    <style>
+        .description {
+            color: #34495e;
+            font-size: 18px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .start-btn {
+            background: #4b6584;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto 0;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .start-btn:hover {
+            background: #3c5270;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </body>
 </html>
