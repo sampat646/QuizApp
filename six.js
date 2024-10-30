@@ -63,15 +63,6 @@ const question = [
         ]
     },
     {
-        question: "Which HTML element defines the footer for a document or section?",
-        answer: [
-            { text: "<bottom>", correct: false },
-            { text: "<footer>", correct: true },
-            { text: "<foot>", correct: false },
-            { text: "<end>", correct: false }
-        ]
-    },
-    {
         question: "What does the `z-index` property do in CSS?",
         answer: [
             { text: "Sets the stack order of elements", correct: true },
