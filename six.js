@@ -1,15 +1,15 @@
 const question = [
     {
-        question: "What does the `<meta>` tag in HTML do?",
+        question: "What is the primary purpose of the meta tag in web development?",
         answer: [
-            { text: "Defines the character set", correct: false },
-            { text: "Provides metadata about the HTML document", correct: true },
-            { text: "Defines a hyperlink", correct: false },
-            { text: "Creates a new line", correct: false }
+            { text: "To set the character encoding of the document", correct: false },
+            { text: "To provide metadata about the HTML document for browsers and search engines", correct: true },
+            { text: "To define links between pages", correct: false },
+            { text: "To create line breaks in text", correct: false }
         ]
     },
     {
-        question: "Which HTML attribute is used to specify an inline style?",
+        question: "Which HTML attribute is used to apply inline styles directly to an element?",
         answer: [
             { text: "style", correct: true },
             { text: "class", correct: false },
@@ -18,7 +18,7 @@ const question = [
         ]
     },
     {
-        question: "Which attribute is used to specify the destination of a hyperlink?",
+        question: "Which attribute specifies the destination of a hyperlink?",
         answer: [
             { text: "href", correct: true },
             { text: "link", correct: false },
@@ -27,16 +27,16 @@ const question = [
         ]
     },
     {
-        question: "What will happen if you use a `<div>` inside a `<span>`?",
+        question: "What is the purpose of using a div element inside a span element?",
         answer: [
-            { text: "It will work without issues", correct: false },
-            { text: "It will cause a validation error", correct: true },
-            { text: "The `<span>` will expand", correct: false },
-            { text: "The `<div>` will not display", correct: false }
+            { text: "It works without any issues", correct: false },
+            { text: "It causes a validation error as span should not contain div elements", correct: true },
+            { text: "It automatically expands the span element", correct: false },
+            { text: "The div element will not display", correct: false }
         ]
     },
     {
-        question: "Which CSS property controls the text size?",
+        question: "Which CSS property is used to control the text size of an element?",
         answer: [
             { text: "font-size", correct: true },
             { text: "text-size", correct: false },
@@ -45,78 +45,70 @@ const question = [
         ]
     },
     {
-        question: "How can you apply a CSS style to all `<p>` elements?",
+        question: "How can you apply a CSS style to all paragraph elements on a page?",
         answer: [
-            { text: "p { ... }", correct: true },
-            { text: ".p { ... }", correct: false },
-            { text: "#p { ... }", correct: false },
-            { text: "paragraph { ... }", correct: false }
+            { text: "By using the selector p { ... }", correct: true },
+            { text: "By using the selector .p { ... }", correct: false },
+            { text: "By using the selector #p { ... }", correct: false },
+            { text: "By using the selector paragraph { ... }", correct: false }
         ]
     },
     {
-        question: "What does the `position: absolute;` property do?",
+        question: "What effect does the position: absolute property have on an element?",
         answer: [
-            { text: "Positions an element relative to its closest positioned ancestor", correct: true },
-            { text: "Positions an element relative to the viewport", correct: false },
-            { text: "Removes the element from the document flow", correct: false },
-            { text: "Fixes an element at the top of the page", correct: false }
+            { text: "It positions an element relative to its closest positioned ancestor", correct: true },
+            { text: "It positions an element relative to the viewport", correct: false },
+            { text: "It removes the element from the document flow", correct: false },
+            { text: "It fixes an element at the top of the page", correct: false }
         ]
     },
     {
-        question: "What does the `z-index` property do in CSS?",
+        question: "What is the purpose of the z-index property in CSS?",
         answer: [
-            { text: "Sets the stack order of elements", correct: true },
-            { text: "Defines the size of an element", correct: false },
-            { text: "Sets the opacity of an element", correct: false },
-            { text: "Specifies the margin of an element", correct: false }
+            { text: "To set the stack order of elements", correct: true },
+            { text: "To define the size of an element", correct: false },
+            { text: "To set the opacity of an element", correct: false },
+            { text: "To specify the margin of an element", correct: false }
         ]
     },
     {
-        question: "What is the result of applying `display: none;` to an element?",
+        question: "What is the result of applying display: none to an element?",
         answer: [
             { text: "The element will be visible", correct: false },
-            { text: "The element will be hidden and take up no space", correct: true },
+            { text: "The element will be hidden and take up no space in the layout", correct: true },
             { text: "The element will be invisible but take up space", correct: false },
-            { text: "The element will be displayed as a block", correct: false }
+            { text: "The element will be displayed as a block element", correct: false }
         ]
     },
     {
-        question: "Which of the following is a valid CSS selector?",
+        question: "Which of the following is a valid CSS selector format?",
         answer: [
-            { text: "div#id { ... }", correct: true },
-            { text: "#id div { ... }", correct: true },
-            { text: ".class div { ... }", correct: true },
-            { text: "div.class { ... }", correct: true }
+            { text: "div#id", correct: true },
+            { text: "#id div", correct: true },
+            { text: ".class div", correct: true },
+            { text: "div.class", correct: true }
         ]
     },
     {
-        question: "What does the `float` property do in CSS?",
+        question: "What does the float property do in CSS?",
         answer: [
             { text: "Positions an element relative to the viewport", correct: false },
             { text: "Floats an element to the left or right of its container", correct: true },
             { text: "Removes an element from the document flow", correct: false },
-            { text: "Sets the alignment of text", correct: false }
+            { text: "Sets the alignment of text within an element", correct: false }
         ]
     },
     {
-        question: "What will be the output of the following code: <div style='color: red;'>Hello</div>?",
+        question: "What is the function of the :hover pseudo-class in CSS?",
         answer: [
-            { text: "Hello", correct: true },
-            { text: "<div>Hello</div>", correct: false },
-            { text: "Error", correct: false },
-            { text: "red", correct: false }
-        ]
-    },
-    {
-        question: "What does the `:hover` pseudo-class do?",
-        answer: [
-            { text: "Styles an element when the mouse hovers over it", correct: true },
-            { text: "Styles an element when clicked", correct: false },
-            { text: "Styles an element when it is focused", correct: false },
-            { text: "Styles an element when it is active", correct: false }
+            { text: "It styles an element when the mouse hovers over it", correct: true },
+            { text: "It styles an element when clicked", correct: false },
+            { text: "It styles an element when it is focused", correct: false },
+            { text: "It styles an element when it is active", correct: false }
         ]
     }
 ];
+
 
 const questionElement = document.getElementsByClassName("questions")[0];
 const answerButtons = document.getElementsByClassName("answer-button")[0];
